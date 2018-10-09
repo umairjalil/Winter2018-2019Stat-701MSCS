@@ -8,7 +8,7 @@ import pandas as pd
 y = [5,7,15,17,9,11]
 X1 = [0,0,10,10,20,20]
 X2 = [0,0,100,100,400,400]
-x = np.column_stack((x1,x2))
+x = np.column_stack((X1,X2))
 x = sm.add_constant(x, prepend=True)
 res = sm.OLS(y,x).fit()
 print res.params
